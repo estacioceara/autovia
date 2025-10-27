@@ -1,0 +1,46 @@
+<form action="">
+    <label>CEP</label>
+    <input onblur="buscarDados()" type="text" id="cep">
+    <br>
+
+    <label>Logradouro</label>
+    <input type="text" id="logradouro">
+    <br>
+
+    <label>Número</label>
+    <input type="text" id="numero">
+    <br>
+
+    <label>Bairro</label>
+    <input type="text" id="bairro">
+    <br>
+
+    <label>Cidade</label>
+    <input type="text" id="cidade">
+    <br>
+
+    <label>UF</label>
+    <input type="text" id="uf">
+    <br>
+
+
+    <button>Enviar</button>
+</form>
+
+<script>
+    function buscarDados() {
+        let cep = document
+                    .getElementById("cep")
+                    .value;
+            
+        fetch(`https://viacep.com.br/ws/${cep}/json`)
+            .then(res => res.json())
+            .then(json => {
+                document.getElementById("logradouro").value = json.logradouro;
+                document.getElementById("bairro").value = json.bairro;
+
+                document.getElementById("cidade").value = json.localidade;
+                document.getElementById("uf").value = json.uf;
+            });
+    }
+</script>
