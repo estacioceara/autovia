@@ -31,7 +31,13 @@ Resolver 04 tarefas/tasks/missões disponiveis no github
 
 - **Datas:** 
     - 17/11/2025
+      - equipe 10
+      - equipe 08
+      - equipe 09
+      - equipe 02
+      - equipe 07
     - 24/11/2025
+      - demais equipes 
 
 - **Formato:** apresentação (definida via sorteio)
 
