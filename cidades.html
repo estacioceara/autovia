@@ -14,7 +14,7 @@
         <hr>
         <form action="">
             <label>Região</label>
-            <select id="regiao" class="form-select mb-3">
+            <select onchange="buscarEstados()" id="regiao" class="form-select mb-3">
                 <option value="" disabled selected>-- Selecione --</option>
             </select>
 
@@ -37,5 +37,31 @@
 
 
 <script>
-    // logica aqui
+    const SELECT_REGIAO = document.getElementById("regiao");
+    const SELECT_ESTADO = document.getElementById("estado");
+    const SELECT_CIDADE = document.getElementById("cidade");
+
+    fetch("https://servicodados.ibge.gov.br/api/v1/localidades/regioes")
+        .then(res => res.json())
+        .then(dados => {
+            dados.map((cada) => {
+                SELECT_REGIAO.innerHTML += `
+                    <option value="${cada.id}">${cada.nome}</option>
+                `;
+            });
+        });
+
+    function buscarEstados () {
+        let regiaoSelecionada = SELECT_REGIAO.value;
+
+        fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/regioes/${regiaoSelecionada}/estados`)
+        .then(res => res.json())
+        .then(dados => {
+            dados.map((cada) => {
+                SELECT_ESTADO.innerHTML += `
+                    <option>${cada.nome}</option>
+                `;
+            });
+        });
+    }
 </script>
