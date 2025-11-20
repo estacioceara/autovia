@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Clientes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/custom.css">
@@ -13,12 +12,12 @@
     <hr>
     <nav class="row">
         <div class="col">
-            Logo
+            <strong>Logo</strong>
         </div>
         <div class="col text-end">
             <a class="btn btn-outline-dark" href="dashboard.html">Dashboard</a>
             <a class="btn btn-outline-dark" href="clientes.html">Clientes</a>
-            <a class="btn btn-outline-dark" href="veiculos.html">Veiculos</a>
+            <a class="btn btn-outline-dark" href="veiculos.html">Veículos</a>
             <a class="btn btn-outline-dark" href="vendas.html">Vendas</a>
             <a class="btn btn-outline-danger" href="index.html">Sair</a>
         </div>
@@ -31,206 +30,137 @@
                 <h1>Clientes</h1>
             </div>
             <div class="col text-end">
-                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#novoVeiculoForm" aria-controls="offcanvasExample">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#novoClienteForm" aria-controls="offcanvasExample">
                     Novo Cliente
                 </button>
             </div>
         </div>
 
-        
-
-        <table class="mt-4 table table-hover table-striped">
+        <table class="mt-4 table table-hover table-striped align-middle">
             <thead class="table-dark">
                 <tr>
-                    <th>Placa</th>
                     <th>Foto</th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Ano</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Cidade</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>ORT-5515</td>
+                    <td><img width="70" class="rounded-circle" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente"></td>
+                    <td>João Silva</td>
+                    <td>joao.silva@email.com</td>
+                    <td>(11) 99999-9999</td>
+                    <td>São Paulo</td>
                     <td>
-                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
-                    </td>
-                    <td>Chevrolet</td>
-                    <td>Classic</td>
-                    <td>2014</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                        <a href="#" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Excluir</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>ORT-5516</td>
+                    <td><img width="70" class="rounded-circle" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente"></td>
+                    <td>Maria Oliveira</td>
+                    <td>maria.oliveira@email.com</td>
+                    <td>(21) 98888-7777</td>
+                    <td>Rio de Janeiro</td>
                     <td>
-                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/ge72f20c5b33e4c0a621b0bf302fb15006de3514296ec3539d8d34fc3aaad4ca02304eec448625b72bc8140446bc16005_640.jpg" alt="">
-                    </td>
-                    <td>Ford</td>
-                    <td>Fusion</td>
-                    <td>2015</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                        <a href="#" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Excluir</a>
                     </td>
                 </tr>
                 <tr>
-                    <td>ORT-5517</td>
+                    <td><img width="70" class="rounded-circle" src="https://randomuser.me/api/portraits/men/45.jpg" alt="Cliente"></td>
+                    <td>Carlos Souza</td>
+                    <td>carlos.souza@email.com</td>
+                    <td>(31) 97777-6666</td>
+                    <td>Belo Horizonte</td>
                     <td>
-                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/g30ca8483cddcc8536f093ca5a80e4e17d7e49eab202dd29bfecab6fb6bc37e92e1b27cd4f6ea693ba94a2de8fc455426_640.jpg" alt="">
+                        <a href="#" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Excluir</a>
                     </td>
-                    <td>Volkswagen</td>
-                    <td>Golf</td>
-                    <td>2016</td>
+                     <tr>
+                    <td><img width="70" class="rounded-circle" src="https://randomuser.me/api/portraits/women/46.jpg" alt="Cliente"></td>
+                    <td>Andreia Floriano Fernando</td>
+                    <td>freiafloriano1@email.com</td>
+                    <td>(91) 9979863166</td>
+                    <td>Belem</td>
                     <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ORT-5518</td>
-                    <td>
-                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/gab8e2921a9c9aa8125712c735d00e4171c2a69786cf902e19b99141f706b152f5b4d11cc31617ae73b7974848dd30901_640.jpg" alt="">
-                    </td>
-                    <td>Honda</td>
-                    <td>Civic</td>
-                    <td>2017</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                        <a href="#" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="#" class="btn btn-sm btn-outline-danger">Excluir</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>ORT-5519</td>
-                    <td>
-                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/g06d7c4c9278029ba49885e97e8be06ea5da7488f521d67ea0ecb388d504e73378af016489c49ddea86a1bde5b5c4dbe8_640.jpg" alt="">
-                    </td>
-                    <td>Fiat</td>
-                    <td>Argo</td>
-                    <td>2018</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
-                    </td>
                 </tr>
-                <tr>
-                    <td>ORT-5520</td>
-                    <td>
-                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/g4d1c879a6da5a78caef9f1c01a14286fe8178ed6d469708ffae2c064be5942e977145da83019076285ae398124796792_640.jpg" alt="">
-                    </td>
-                    <td>Renault</td>
-                    <td>Sandero</td>
-                    <td>2019</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ORT-5521</td>
-                    <td>
-                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
-                    </td>
-                    <td>Toyota</td>
-                    <td>Corolla</td>
-                    <td>2020</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ORT-5522</td>
-                    <td>
-                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
-                    </td>
-                    <td>Nissan</td>
-                    <td>Sentra</td>
-                    <td>2021</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ORT-5523</td>
-                    <td>
-                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
-                    </td>
-                    <td>Mitsubishi</td>
-                    <td>Outlander</td>
-                    <td>2022</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ORT-5524</td>
-                    <td>
-                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
-                    </td>
-                    <td>BMW</td>
-                    <td>X3</td>
-                    <td>2023</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
-                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
-                    </td>
-                </tr>
-
             </tbody>
         </table>
     </section>
-    
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="novoClienteForm" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Novo Cliente</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <form id="cadastroForm">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" class="form-control mb-3" placeholder="Digite o nome" required>
 
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control mb-3" placeholder="Digite o e-mail" required>
 
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" class="form-control mb-3" placeholder="(00) 00000-0000" pattern="[0-9]{10,11}" required>
 
-<div class="offcanvas offcanvas-end" tabindex="-1" id="novoVeiculoForm" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Novo Veiculo</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <form action="">
-        <label for="placa">Placa</label>
-        <input type="text" class="form-control mb-3" placeholder="Digite aqui">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" class="form-control mb-3" placeholder="Digite a cidade" required>
 
-        <label for="marca">Marca</label>
-        <select class="form-select mb-3" name="" id="">
-            <option>-- Selecione --</option>
-            <option>Chevrolet</option>
-            <option>Volkswagen</option>
-            <option>Toyota</option>
-            <option>Fiat</option>
-        </select>
+                <label for="foto">Foto</label>
+                <input type="file" id="foto" class="form-control mb-3">
 
-        <label for="modelo">Modelo</label>
-        <select class="form-select mb-3" name="" id="">
-            <option>-- Selecione --</option>
-            <option>Classic</option>
-            <option>Celta</option>
-            <option>Gol</option>
-            <option>Uno</option>
-        </select>
+                <button type="submit" class="btn btn-dark w-100">Cadastrar</button>
+            </form>
 
-        <label for="ano">Ano</label>
-        <input type="number" min="1950" max="2026" class="form-control mb-3" placeholder="Digite aqui">
+            <p id="mensagem" class="mt-3"></p>
+        </div>
+    </div>
 
-        <label for="foto">Foto</label>
-        <input type="file" class="form-control mb-3" placeholder="Digite aqui">
+    <script>
+        const API_URL = "https://jsonplaceholder.typicode.com/users";
+        const form = document.getElementById("cadastroForm");
+        const mensagem = document.getElementById("mensagem");
 
-        <button class="btn btn-dark w-100">PRONTO</button>
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
 
-    </form>
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
 
-  </div>
-</div>
+            try {
+                const response = await fetch(API_URL);
+                const devedores = await response.json();
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                const existe = devedores.some(cliente => 
+                    cliente.email.toLowerCase() === email.toLowerCase()
+                );
+
+                if (existe) {
+                    mensagem.textContent = "O novo cliente consta na lista de devedores do SPC/SERASA.";
+                    mensagem.style.color = "red";
+                } else {
+                    mensagem.textContent = `Cliente "${nome}" cadastrado com sucesso!`;
+                    mensagem.style.color = "green";
+                    form.reset();
+                }
+
+            } catch (erro) {
+                console.error("Erro ao verificar cliente:", erro);
+                mensagem.textContent = "Erro ao conectar à API.";
+                mensagem.style.color = "orange";
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

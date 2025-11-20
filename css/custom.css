@@ -2,3 +2,21 @@ html, body {
     height: 100%;
     background-color: #EFEFEF;
 }
+
+/* ESTILO PARA CAMPO INVÁLIDO - BORDA VERMELHA */
+input:invalid {
+    border: 2px solid #e74c3c;
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+/* ESTILO PARA CAMPO INVÁLIDO COM FOCO - BORDA VERMELHA COM SOMBRA */
+input:focus:invalid {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+/* ESTILO PARA CAMPO VÁLIDO - BORDA VERDE */
+input:valid {
+    border: 2px solid #2ecc71;
+    background-color: rgba(46, 204, 113, 0.05);
+}
