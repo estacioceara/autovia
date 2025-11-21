@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perguntas Frequentes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      background: linear-gradient(135deg, #0078ff, #00c6ff);
+      color: white;
+      padding: 30px 0;
+      margin: 0 0 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px 30px;
+    }
+
+    details {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 15px 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    details:last-child {
+      border-bottom: none;
+    }
+
+    summary {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #0078ff;
+      outline: none;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "＋";
+      float: right;
+      font-size: 1.3em;
+      color: #0078ff;
+      transition: transform 0.3s;
+    }
+
+    details[open] summary::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+
+    .resposta {
+      margin-top: 10px;
+      padding-left: 10px;
+      color: #555;
+      line-height: 1.6;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .faq-container {
+        padding: 15px 20px;
+      }
+      summary {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Perguntas Frequentes</h1>
+
+  <div class="faq-container">
+    <details>
+      <summary>Como faço para usar o sistema?</summary>
+      <p class="resposta">Leia as instruções na página inicial e siga o passo a passo fornecido para acessar todas as funcionalidades.</p>
+    </details>
+
+    <details>
+      <summary>Qual é o problema mais comum?</summary>
+      <p class="resposta">O problema mais comum é o esquecimento de senha. Recomendamos sempre atualizar suas credenciais e mantê-las seguras.</p>
+    </details>
+
+    <details>
+      <summary>Como faço para entrar em contato com o suporte?</summary>
+      <p class="resposta">Você pode entrar em contato conosco pelo e-mail <b>suporte@empresa.com</b> ou através do chat na página principal.</p>
+    </details>
+
+    <details>
+      <summary>O sistema é seguro?</summary>
+      <p class="resposta">Sim, nosso sistema utiliza criptografia de ponta e segue os padrões internacionais de segurança da informação.</p>
+    </details>
+
+    <details>
+      <summary>Como faço para atualizar meus dados?</summary>
+      <p class="resposta">Você pode atualizar seus dados acessando o menu <b>Configurações → Meu Perfil</b> e clicando em “Editar informações”.</p>
+    </details>
+  </div>
+</body>
+</html>
