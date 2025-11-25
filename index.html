@@ -1,70 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-        }
+    <title>Document</title>
 
-        .background-full {
-            height: 100vh;
-            background-image: url("img/rodovia.jpeg");
-            background-size: cover;
-            background-position: bottom center;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        .login-card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 40px 35px;
-            width: 600px;
-            box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-        }
-
-        .login-card h2 {
-            font-weight: 700;
-        }
-
-        .btn-google {
-            border: 1px solid #ccc;
-            background: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="css/custom.css">
 </head>
+<body class="container-fluid">
+    <section class="row h-100">
+        <div class="col-8 bg-dark">
+            Imagem do carro
+        </div>
 
-<body>
-    <section class="background-full d-flex align-items-center justify-content-center">
-        <div class="login-card">
-            <div class="d-flex align-items-center justify-content-center mb-4">
-                <img src="img/logo.png" alt="Autovia" style="width: 80px; height: 80px;">
-                <span class="fw-bold fs-2 ms-1">Autovia</span>
+        <div class="col-4">
+            <div class="h-100 d-flex justify-content-center align-items-center">
+                <form class="w-75" action="dashboard.html">
+                    <input class="form-control form-control-lg mb-3" type="email" placeholder="Email">
+
+                    <input class="form-control form-control-lg mb-3" type="password" placeholder="Senha">
+
+                    <button class="btn btn-dark btn-lg w-100">ENTRAR</button>
+                </form>
             </div>
-
-            <h2 class="mb-1">Bem-vindo(a)!</h2>
-            <p class="text-muted mb-4">Faça login para acessar o sistema</p>
-
-            <form action="dashboard.html">
-                <label class="mb-1 fw-semibold">Email</label>
-                <input class="form-control form-control-lg mb-3" type="email" placeholder="Digite seu email" required>
-
-                <label class="mb-1 fw-semibold">Senha</label>
-                <input class="form-control form-control-lg mb-3" type="password" placeholder="Digite sua senha"
-                    required>
-
-                <button class="btn btn-dark btn-lg w-100 mb-3">Entrar</button>
-            </form>
         </div>
     </section>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
-
 </html>
