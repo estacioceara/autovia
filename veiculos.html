@@ -1,335 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veículos</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Document</title>
 
-    <style>
-        .vehicle-card {
-            transition: 0.2s;
-            border-radius: 18px;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        .vehicle-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .vehicle-img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 16px;
-        }
-
-        .price-tag {
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .edit-btn,
-        .delete-btn {
-            border-radius: 12px !important;
-            font-weight: 600 !important;
-        }
-    </style>
+    <link rel="stylesheet" href="css/custom.css">
 </head>
-
-<body class="container-fluid p-0 bg-light">
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-2 px-3 rounded-3 mb-4">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="img/logo.png" class="rounded-circle me-2" style="max-width: 60px; max-height: 60px;">
-                <strong class="fs-3">Autovia</strong>
-            </a>
-
-            <div class="mx-auto d-none d-lg-flex gap-2">
-                <a class="btn btn-outline-dark" href="dashboard.html">Dashboard</a>
-                <a class="btn btn-outline-dark" href="clientes.html">Clientes</a>
-                <a class="btn btn-dark" href="veiculos.html">Veículos</a>
-                <a class="btn btn-outline-dark" href="vendas.html">Vendas</a>
-                <a class="btn btn-outline-dark" href="faq.html">FAQ</a>
-            </div>
-
-            <div class="d-flex align-items-center gap-3 ">
-
-                <div class="d-flex align-items-center">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" width="40" height="40"
-                        class="rounded-circle me-2">
-                    <div class="d-none d-lg-block">
-                        <span class="fw-semibold">Usuário</span><br>
-                        <small class="text-muted">Conta</small>
-                    </div>
-                </div>
-
-                <a class="btn btn-outline-danger btn-sm ms-2" href="index.html">Sair</a>
-            </div>
+<body class="container-fluid">
+    <hr>
+    <nav class="row">
+        <div class="col">
+            Logo
+        </div>
+        <div class="col text-end">
+            <a class="btn btn-outline-dark" href="dashboard.html">Dashboard</a>
+            <a class="btn btn-outline-dark" href="clientes.html">Clientes</a>
+            <a class="btn btn-outline-dark" href="veiculos.html">Veiculos</a>
+            <a class="btn btn-outline-dark" href="vendas.html">Vendas</a>
+            <a class="btn btn-outline-danger" href="index.html">Sair</a>
         </div>
     </nav>
+    <hr>
 
-    <section class="p-3">
-
-        <div class="d-flex justify-content-between align-items-center flex-wrap p-3 mb-2 shadow-sm rounded-4 bg-white">
-            <h5 class="fw-bold m-0">Veículos</h2>
-                <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#novoVeiculoForm"
-                    aria-controls="offcanvasExample">
-                    <i class="bi bi-plus-lg me-2"></i> Novo Veículo
+    <section class="card card-body">
+        <div class="row">
+            <div class="col">
+                <h1>Veiculos</h1>
+            </div>
+            <div class="col text-end">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#novoVeiculoForm" aria-controls="offcanvasExample">
+                    Novo Veiculo
                 </button>
-        </div>
-
-        <div class="row g-4 pt-1">
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="vehicle-card p-3 shadow-sm bg-white">
-
-                    <div class="text-center">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2maX20zvlbC3040yaRs6fo3261u1TJ9Z_vq7yyHESKHaUMfOgTeE-2ZL0FrG3M6fphyNziu_P3OnJknmdrAS2UNOXFzFwe6FFmNgoOKNi-ZGcNv6E3AfZWMN0Y_stZ-GuU629s6SqMuQJ/s1600-rw/Chevrolet-Classic-2014%2B%281%29.jpg"
-                            class="vehicle-img border">
-                    </div>
-
-                    <h5 class="fw-bold mt-3">Chevrolet Classic</h5>
-                    <div class="text-muted">Placa: ORT-5515 - Ano 2014</div>
-
-                    <div class="mt-3 d-flex justify-content-between align-items-center">
-                        <span class="price-tag">R$ 29.900</span>
-                        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Disponível</span>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-                        <button class="btn btn-dark w-100">Ver Mais</button>
-                        <button class="btn btn-outline-primary w-100 edit-btn">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-outline-danger w-100 delete-btn">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="vehicle-card p-3 shadow-sm bg-white">
-
-                    <div class="text-center">
-                        <img src="https://uploads.vrum.com.br/2022/12/a22332c6-ford-fusion-titanium-2.0-ecoboost-awd-sedan-prata-de-frente-no-asfalto.jpg"
-                            class="vehicle-img border">
-                    </div>
-
-                    <h5 class="fw-bold mt-3">Ford Fusion</h5>
-                    <div class="text-muted">Placa: ORT-5516 - Ano 2015</div>
-
-                    <div class="mt-3 d-flex justify-content-between align-items-center">
-                        <span class="price-tag">R$ 53.500</span>
-                        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Disponível</span>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-                        <button class="btn btn-dark w-100">Ver Mais</button>
-                        <button class="btn btn-outline-primary w-100 edit-btn">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-outline-danger w-100 delete-btn">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="vehicle-card p-3 shadow-sm bg-white">
-
-                    <div class="text-center">
-                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkZvk78u5IU8WptfNbs2nTzB7ekJmyUuIDZFsLWWiVryu3xcMafn-1He2nHp70Ce5vVpPHfRu-LCatAumVGMGqL26BW9eYuKWq9U6A01La7SRz2PvftMVJVf8dyHw8z50BQDt47sT6XHw/s640-rw/VW-Golf-GTI-2016-Nacional%2B%25284%2529.jpg"
-                            class="vehicle-img border">
-                    </div>
-
-                    <h5 class="fw-bold mt-3">Volkswagen Golf</h5>
-                    <div class="text-muted">Placa: ORT-5517 - Ano 2016</div>
-
-                    <div class="mt-3 d-flex justify-content-between align-items-center">
-                        <span class="price-tag">R$ 63.120</span>
-                        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Disponível</span>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-                        <button class="btn btn-dark w-100">Ver Mais</button>
-                        <button class="btn btn-outline-primary w-100 edit-btn">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-outline-danger w-100 delete-btn">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="vehicle-card p-3 shadow-sm bg-white">
-
-                    <div class="text-center">
-                        <img src="https://i0.statig.com.br/bancodeimagens/5d/f7/tz/5df7tz8cxtswg7i9tqcei6uk2.jpg"
-                            class="vehicle-img border">
-                    </div>
-
-                    <h5 class="fw-bold mt-3">Renault Sandero</h5>
-                    <div class="text-muted">Placa: ORT-5519 - Ano 2019</div>
-
-                    <div class="mt-3 d-flex justify-content-between align-items-center">
-                        <span class="price-tag">R$ 40.576</span>
-                        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Disponível</span>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-                        <button class="btn btn-dark w-100">Ver Mais</button>
-                        <button class="btn btn-outline-primary w-100 edit-btn">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-outline-danger w-100 delete-btn">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="vehicle-card p-3 shadow-sm bg-white">
-
-                    <div class="text-center">
-                        <img src="https://cdn.motor1.com/images/mgl/wGmbR/s1/comparativo-vw-virtus-x-toyota-corolla.jpg"
-                            class="vehicle-img border">
-                    </div>
-
-                    <h5 class="fw-bold mt-3">Toyota Corolla</h5>
-                    <div class="text-muted">Placa: ORT-5519 - Ano 2019</div>
-
-                    <div class="mt-3 d-flex justify-content-between align-items-center">
-                        <span class="price-tag">R$ 113.230</span>
-                        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Disponível</span>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-                        <button class="btn btn-dark w-100">Ver Mais</button>
-                        <button class="btn btn-outline-primary w-100 edit-btn">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-outline-danger w-100 delete-btn">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="vehicle-card p-3 shadow-sm bg-white">
-
-                    <div class="text-center">
-                        <img src="https://www.nissan.com.br/content/dam/Nissan/br/site/veiculos/sentra-my26/360/exclusive-int-premium/branco-teto-preto/01.jpg.ximg.c1h.360.jpg"
-                            class="vehicle-img border">
-                    </div>
-
-                    <h5 class="fw-bold mt-3">Nissan Sentra</h5>
-                    <div class="text-muted">Placa: ORT-5522 - Ano 2021</div>
-
-                    <div class="mt-3 d-flex justify-content-between align-items-center">
-                        <span class="price-tag">R$ 69.500</span>
-                        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Disponível</span>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-                        <button class="btn btn-dark w-100">Ver Mais</button>
-                        <button class="btn btn-outline-primary w-100 edit-btn">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-outline-danger w-100 delete-btn">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="vehicle-card p-3 shadow-sm bg-white">
-
-                    <div class="text-center">
-                        <img src="https://s3.ecompletocarros.dev/images/lojas/108/veiculos/137013/veiculoInfoVeiculoImagesMobile/vehicle_image_1678458058_d41d8cd98f00b204e9800998ecf8427e.jpeg"
-                            class="vehicle-img border">
-                    </div>
-
-                    <h5 class="fw-bold mt-3">BMW X3</h5>
-                    <div class="text-muted">Placa: ORT-5523 - Ano 2023</div>
-
-                    <div class="mt-3 d-flex justify-content-between align-items-center">
-                        <span class="price-tag">R$ 353.500</span>
-                        <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">Disponível</span>
-                    </div>
-
-                    <div class="mt-4 d-flex gap-2">
-                        <button class="btn btn-dark w-100">Ver Mais</button>
-                        <button class="btn btn-outline-primary w-100 edit-btn">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <button class="btn btn-outline-danger w-100 delete-btn">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                    </div>
-
-                </div>
             </div>
         </div>
 
+        
+
+        <table class="mt-4 table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Placa</th>
+                    <th>Foto</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ORT-5515</td>
+                    <td>
+                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
+                    </td>
+                    <td>Chevrolet</td>
+                    <td>Classic</td>
+                    <td>2014</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5516</td>
+                    <td>
+                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/ge72f20c5b33e4c0a621b0bf302fb15006de3514296ec3539d8d34fc3aaad4ca02304eec448625b72bc8140446bc16005_640.jpg" alt="">
+                    </td>
+                    <td>Ford</td>
+                    <td>Fusion</td>
+                    <td>2015</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5517</td>
+                    <td>
+                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/g30ca8483cddcc8536f093ca5a80e4e17d7e49eab202dd29bfecab6fb6bc37e92e1b27cd4f6ea693ba94a2de8fc455426_640.jpg" alt="">
+                    </td>
+                    <td>Volkswagen</td>
+                    <td>Golf</td>
+                    <td>2016</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5518</td>
+                    <td>
+                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/gab8e2921a9c9aa8125712c735d00e4171c2a69786cf902e19b99141f706b152f5b4d11cc31617ae73b7974848dd30901_640.jpg" alt="">
+                    </td>
+                    <td>Honda</td>
+                    <td>Civic</td>
+                    <td>2017</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5519</td>
+                    <td>
+                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/g06d7c4c9278029ba49885e97e8be06ea5da7488f521d67ea0ecb388d504e73378af016489c49ddea86a1bde5b5c4dbe8_640.jpg" alt="">
+                    </td>
+                    <td>Fiat</td>
+                    <td>Argo</td>
+                    <td>2018</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5520</td>
+                    <td>
+                        <img width="100px" src="https://randompicturegenerator.com/img/car-generator/g4d1c879a6da5a78caef9f1c01a14286fe8178ed6d469708ffae2c064be5942e977145da83019076285ae398124796792_640.jpg" alt="">
+                    </td>
+                    <td>Renault</td>
+                    <td>Sandero</td>
+                    <td>2019</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5521</td>
+                    <td>
+                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
+                    </td>
+                    <td>Toyota</td>
+                    <td>Corolla</td>
+                    <td>2020</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5522</td>
+                    <td>
+                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
+                    </td>
+                    <td>Nissan</td>
+                    <td>Sentra</td>
+                    <td>2021</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5523</td>
+                    <td>
+                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
+                    </td>
+                    <td>Mitsubishi</td>
+                    <td>Outlander</td>
+                    <td>2022</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORT-5524</td>
+                    <td>
+                        <img width="100px" src="https://cdn.motor1.com/images/mgl/RLAOx/s1/chevrolet-classic-2015-ganha-ar-condicionado-de-serie-e-parte-de-r-30590.webp" alt="">
+                    </td>
+                    <td>BMW</td>
+                    <td>X3</td>
+                    <td>2023</td>
+                    <td>
+                        <a href="" class="btn btn-sm btn-outline-warning">Editar</a>
+                        <a href="" class="btn btn-sm btn-outline-danger">Excluir</a>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
     </section>
+    
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="novoVeiculoForm">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title">Novo Veículo</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-        </div>
 
-        <div class="offcanvas-body">
-            <form>
 
-                <label class="mt-2">Placa</label>
-                <input type="text" class="form-control" placeholder="Digite a placa" required>
 
-                <label class="mt-3">Marca</label>
-                <select class="form-select" required>
-                    <option value="" selected disabled hidden>-- Selecione --</option>
-                    <option>Chevrolet</option>
-                    <option>Volkswagen</option>
-                    <option>Toyota</option>
-                </select>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="novoVeiculoForm" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Novo Veiculo</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form action="">
+        <label for="placa">Placa</label>
+        <input type="text" class="form-control mb-3" placeholder="Digite aqui">
 
-                <label class="mt-3">Modelo</label>
-                <select class="form-select" required>
-                    <option value="" selected disabled hidden>-- Selecione --</option>
-                    <option>Classic</option>
-                    <option>Corolla</option>
-                </select>
+        <label for="marca">Marca</label>
+        <select class="form-select mb-3" name="" id="">
+            <option>-- Selecione --</option>
+            <option>Chevrolet</option>
+            <option>Volkswagen</option>
+            <option>Toyota</option>
+            <option>Fiat</option>
+        </select>
 
-                <label class="mt-3">Ano</label>
-                <input type="number" min="1950" max="2026" class="form-control" placeholder="Digite o ano" required>
+        <label for="modelo">Modelo</label>
+        <select class="form-select mb-3" name="" id="">
+            <option>-- Selecione --</option>
+            <option>Classic</option>
+            <option>Celta</option>
+            <option>Gol</option>
+            <option>Uno</option>
+        </select>
 
-                <label class="mt-3">Foto</label>
-                <input type="file" class="form-control" required>
+        <label for="ano">Ano</label>
+        <input type="number" min="1950" max="2026" class="form-control mb-3" placeholder="Digite aqui">
 
-                <button class="btn btn-dark w-100 mt-4">Criar Veículo</button>
+        <label for="foto">Foto</label>
+        <input type="file" class="form-control mb-3" placeholder="Digite aqui">
 
-            </form>
-        </div>
-    </div>
+        <button class="btn btn-dark w-100">PRONTO</button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    </form>
+
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
-
 </html>
